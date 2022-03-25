@@ -186,3 +186,13 @@ Utilizando el comando:
     ```
     Reemplazar el webpack del script "start" por este de desarrollo y añadir --open para que lo abra por defecto en el navegador.
 
+3. Comenzar a crear la apicación de react, boilerplate de carpetas "Componets" y "Containers.
+
+4. Configurar en webpack para que pueda cargar los archivos de CSS, correr el siguente código:
+
+    ```
+    npm i css-loader style-loader
+    ```
+    Y despues ir a la carpeta de configuracion del webpack para agregar este cambio.
+
+5. Comenzar a crear los componentes, se inicia por el componente "App" y "HomeScreen" en JS y en CSS.
