@@ -196,3 +196,4 @@ Utilizando el comando:
     Y despues ir a la carpeta de configuracion del webpack para agregar este cambio.
 
 5. Comenzar a crear los componentes, se inicia por el componente "App" y "HomeScreen" en JS y en CSS.
+
