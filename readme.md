@@ -36,7 +36,7 @@ Crear un cuestionario de 11 preguntas, con respuestas verdaderas o falsas en la 
 <br>
 
 ## TAREAS DIARIAS
-### DIA 1
+### DIA 1 📜📅📁
 <br>
 
 1. Revisar el repositorio de GitLab enviado para desestructurar tareas y entender el problema https://gitlab.com/mocipublic/front-code-challenge/-/wikis/home.
@@ -106,7 +106,7 @@ Crear un cuestionario de 11 preguntas, con respuestas verdaderas o falsas en la 
     ```
     npm run build
     ```
-    Esto para compactar el código en main.js(traducción del webpack)
+    Esto para compactar el código en main.js(compilar código con webpack).
 
 <br>
 
@@ -163,4 +163,26 @@ Utilizando el comando:
 
     git commit -m "Primer commit"
     ```
-23. Crear el repositorio en GitHub y subir el repo local
+23. Crear el repositorio en GitHub y subir el repo local.
+
+<br>
+
+### DIA 2
+<br>
+
+1. Comenzar instalación de React.
+
+    ```
+    npm i react react-dom
+    ```
+    Arrojó un error al importar react y reactDOM en el archivo index.js, según sugerencias necesitaba instalar los modulos como desarrollador, siguiendo las indicaciones del error se instaló lo suguerido.
+    ```
+    npm i --save-dev @types/react-dom
+    ```
+
+2.  Para actualizar los cambios agregados al webpack en tiempo real es necesario instalar
+    ```
+    npm i webpack-dev-server
+    ```
+    Reemplazar el webpack del script "start" por este de desarrollo y añadir --open para que lo abra por defecto en el navegador.
+
