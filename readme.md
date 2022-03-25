@@ -197,3 +197,10 @@ Utilizando el comando:
 
 5. Comenzar a crear los componentes, se inicia por el componente "App" y "HomeScreen" en JS y en CSS.
 
+6. Instalar react-router-dom para manejar mejor el ruteo en el proyecto.
+    ```
+    npm i react-router-dom
+    ```
+    Y copiamos la importacion de router en "App.js".
+
+7. Realizar elementos HTML vista "HomePage", darle los respectivos estilos en CSS y realizar link a la próxima vista "quiz"

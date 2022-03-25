@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import '../css/HomeScreen.css';
 
@@ -15,7 +16,9 @@ const HomeScreen = () => {
                 </header>
                 <h2>You will be presented with 10 True or False questions.</h2>
                 <h2>Can you score 100%?</h2>
-                <h3>BEGIN</h3>
+                <Link to='/quiz' className='linkHome'>
+                    <button className='begin'>BEGIN</button>
+                </Link>
             </div>
         </>
     )
