@@ -1,13 +1,13 @@
 # Paso a paso y tareas Prueba Técnica ✨🏃‍♀️🏃‍♀️🏃‍♀️
 
-### ***Fecha Inicio:*** Jueves 24 Marzo 5pm.
-### ***Plazo máximo de entrega Prueba Tecnica:*** Lunes 28 Marzo 11:43am.
+### ***Fecha Inicio:*** 
+### ***Plazo máximo de entrega Prueba Tecnica:*** 
 <br>
 
 ### **Objetivo principal**
 Crear un cuestionario de 11 preguntas, con respuestas verdaderas o falsas en la tecnología en la que está aplicando para trabajar(ReactJS). **No debe implementar solo la solución más básica. Esta es una oportunidad para mostrar tus habilidades e impresionar**.
 
-## **Objetivos**
+### **Objetivos**
 
 <ul>
   <li><input type="checkbox"> Implemente las pantallas basadas en los wireframes y la API a continuación.</li>
@@ -29,8 +29,14 @@ Crear un cuestionario de 11 preguntas, con respuestas verdaderas o falsas en la 
 * Manejo de efectos secundarios
 * Documentación
 
+<br>
+
+***
+
+<br>
+
 ## TAREAS DIARIAS
-### Dia 1
+### DIA 1
 <br>
 
 1. Revisar el repositorio de GitLab enviado para desestructurar tareas y entender el problema https://gitlab.com/mocipublic/front-code-challenge/-/wikis/home.
@@ -39,7 +45,7 @@ Crear un cuestionario de 11 preguntas, con respuestas verdaderas o falsas en la 
 
 2. Comenzar proceso de planeación de tareas para 5 dias:
 
-    * Dia 1: Planeación y organización
+    * Dia 1: Planeación y organización.
     * Dia 2: 
     * Dia 3:
     * Dia 4:
@@ -82,8 +88,9 @@ Crear un cuestionario de 11 preguntas, con respuestas verdaderas o falsas en la 
 <br>
 
 9. Crear los scripts necesarios para el proyecto en el archivo "package.json" sección "scripts":
-**"start": "webpack --mode development"**
-**"build": "webpack --mode production"**
+
+    **"start": "webpack --mode development"**
+    **"build": "webpack --mode production"**
 
 <br>
 
@@ -91,7 +98,7 @@ Crear un cuestionario de 11 preguntas, con respuestas verdaderas o falsas en la 
     ```
     npm start
     ```
-Aquí aparece la carpeta dist en el proyecto
+    Aparece la carpeta "dist" en el proyecto.
 
 <br>
 
@@ -99,7 +106,7 @@ Aquí aparece la carpeta dist en el proyecto
     ```
     npm run build
     ```
-Esto para compactar el código en main.js(traducción del webpack)
+    Esto para compactar el código en main.js(traducción del webpack)
 
 <br>
 
@@ -107,11 +114,11 @@ Esto para compactar el código en main.js(traducción del webpack)
 
 <br>
 
-13. Crear dentro de la carpeta "src" nuestros archivos principales "index.js", "index.html" y "styles.css".
+13. Crear dentro de la carpeta "src" nuestros archivos principales "index.js" e "index.html".
 
 <br>
 
-14. Dentro del archivo index.html comenzar codigo base y crear el elemento id "root" donde la aplicacion de react se cargará.
+14. Dentro del archivo index.html comenzar codigo base y crear el elemento div id "root" donde la aplicacion de react se cargará.
 
 <br>
 
@@ -156,4 +163,4 @@ Utilizando el comando:
 
     git commit -m "Primer commit"
     ```
-
+23. Crear el repositorio en GitHub y subir el repo local

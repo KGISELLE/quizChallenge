@@ -1,7 +1,7 @@
 {
-  "name": "desdecero",
+  "name": "quizchallenge",
   "version": "1.0.0",
-  "description": "",
+  "description": "technical test",
   "main": "index.js",
   "scripts": {
     "start": "webpack --mode development",
