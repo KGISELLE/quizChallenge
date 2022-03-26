@@ -9,40 +9,39 @@ const QuizScreen = () => {
 
     const URL = 'https://opentdb.com/api.php?amount=10&difficulty=hard&type=boolean';
 
-    const [questions, setQuestions] = useState([]);
-
-    const [quantityQuest, setQuantityQuest] = useState([]);
-
+    const [apiResults, setApiResults] = useState([]); //Trae objeto results de la API
     
     const fetchAPI = async() => {
         const response = await fetch(URL);
         console.log(response.status);
         const responseJSON = await response.json();
-        setQuestions(responseJSON.results);
-        
-        setQuantityQuest(responseJSON.results.length);
-        console.log(responseJSON);
-
+        setApiResults(responseJSON.results);
+        console.log(responseJSON.results);
     }
 
     useEffect(() => {
         fetchAPI()
     }, [])
 
+    const questCategory = apiResults.map( apiResult => apiResult.category)
+
+    console.log(questCategory[0]);
+
     return (
         <>
-            <div className="quizCategory">
+            <div className="quizView">
                 <header className='headerQuiz'>
-                    <h1 className='titleQuiz'>traer categoria de la trivia de API</h1>
+                    <h1 className='titleQuiz'>{questCategory[0]}</h1>
                 </header>
                 <div>
-                    <QuestionSpace question={questions} quantityQuest={quantityQuest}/>
+                    <QuestionSpace apiResults={apiResults} />
                 </div>
-                <ul>
-                    {questions.map( (question, index) => (
-                        <li key={index}>{question.category}</li>
+                {/* <ul>
+                    {apiResults.map( (apiResult, index) => (
+                        <li key={index}>{apiResult.question}</li>
                     ))}
-                </ul>
+                </ul> */}
+                
 
             </div>
         </>

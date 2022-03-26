@@ -47,7 +47,7 @@ Crear un cuestionario de 11 preguntas, con respuestas verdaderas o falsas en la 
 
     * Dia 1: Planeación y organización (Configuraciones Proyecto).
     * Dia 2: Maquetación vista HomeScreen.
-    * Dia 3:
+    * Dia 3: Maquetación vista QuizScreen.
     * Dia 4:
     * Dia 5:
 
@@ -210,3 +210,21 @@ Utilizando el comando:
 9. Averiguar consumo API referencia y realizar pruebas.
 
 10. Crear componente "QuestionSpace".
+<br>
+
+### DIA 3
+<br>
+
+1. Comenzar a crear elementos HTML del componente "QuizSpace", creando el respectivo componente react y archivo CSS.
+
+2. Lograr que el contenido del titulo de la pregunta "category", sea dinámico halado desde el API.
+
+3. Lograr pintar una sola pregunta en la vista "QuizScreen" desde el API.
+
+4. Lograr que el numero de la pregunta se muestre en la vista "QuizScreen" de forma dinámica.
+
+5. Completar maquetación vista "QuizScreen".
+
+6. Lograr que al dar click en cualquiera de los dos botones de la vista "QuizScreen", se cambie la vista a la siguiente pregunta (Pendiente).
+
+7. Lograr que el resultado de dar click en el boton true o false se guarde para ser comprobado con la respuesta correcta e ir acumulando las respuestas correctas sumandolas, para al final poder dar un resultado final (Pendiente).
