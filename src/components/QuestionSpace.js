@@ -1,28 +1,28 @@
-// import React, { useState } from 'react';
+import React, { useState } from 'react';
 
-// import QuizScreen from '../containers/QuizScreen';
+import QuizScreen from '../containers/QuizScreen';
 
-// const QuestionSpace = () => {
+const QuestionSpace = (props) => {
 
-//     const [onQuestion, setOnQuestion] = useState(0);
+    const [onQuestion, setOnQuestion] = useState(0);
 
-//     const [score, setScore] = useState(0);
+    const [score, setScore] = useState(0);
 
-//     const [finished, setFinished] = useState(0);
+    const [finished, setFinished] = useState(0);
 
 
-//     return (
-//         <>
-//             <div>question[onQuestion].question</div>
-//             <div>
-//                 <button>True</button>
-//                 <button>False</button>
-//             </div>
-//             <div>
-//                 <span>{onQuestion + 1} of</span>question.length
-//             </div>
-//         </>
-//     )
-// }
+    return (
+        <>
+            <div>question[onQuestion].question</div>
+            <div>
+                <button>True</button>
+                <button>False</button>
+            </div>
+            <div>
+                <span>{onQuestion + 1} of</span>{props.quantityQuest}
+            </div>
+        </>
+    )
+}
 
-// export default QuestionSpace;
+export default QuestionSpace;

@@ -208,3 +208,5 @@ Utilizando el comando:
 8. Comenzar a crear elementos HTML de la vista "QuizScreen", creando el respectivo componente y archivo CSS.
 
 9. Averiguar consumo API referencia y realizar pruebas.
+
+10. Crear componente "QuestionSpace".
