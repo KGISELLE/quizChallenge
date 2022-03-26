@@ -3,9 +3,6 @@ import { Link } from 'react-router-dom';
 
 import '../css/HomeScreen.css';
 
-import Card from '../components/Card/Card';
-
-
 
 const HomeScreen = () => {
     return (

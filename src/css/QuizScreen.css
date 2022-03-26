@@ -1,0 +1,11 @@
+.headerQuiz {
+    background-color: #10738B;
+    box-shadow: 0px 4px 0.4em #551A8B, 0px 8px 0.4em #10738B;
+}
+.titleQuiz {
+    color: white;
+    text-align: center;
+    box-sizing: auto;
+    margin: auto;
+    padding: 5vh;
+}

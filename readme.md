@@ -45,8 +45,8 @@ Crear un cuestionario de 11 preguntas, con respuestas verdaderas o falsas en la 
 
 2. Comenzar proceso de planeación de tareas para 5 dias:
 
-    * Dia 1: Planeación y organización.
-    * Dia 2: 
+    * Dia 1: Planeación y organización (Configuraciones Proyecto).
+    * Dia 2: Maquetación vista HomeScreen.
     * Dia 3:
     * Dia 4:
     * Dia 5:
@@ -201,6 +201,10 @@ Utilizando el comando:
     ```
     npm i react-router-dom
     ```
-    Y copiamos la importacion de router en "App.js".
+    Y copiamos la importación de router en "App.js".
 
 7. Realizar elementos HTML vista "HomePage", darle los respectivos estilos en CSS y realizar link a la próxima vista "quiz"
+
+8. Comenzar a crear elementos HTML de la vista "QuizScreen", creando el respectivo componente y archivo CSS.
+
+9. Averiguar consumo API referencia y realizar pruebas.
