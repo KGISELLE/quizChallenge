@@ -8,28 +8,49 @@ const QuestionSpace = (props) => {
 
     const [score, setScore] = useState(0);  //Puntuacion
 
-    const [finished, setFinished] = useState(0); //Si ya se respondieron todas las preguntas
+    const [finished, setFinished] = useState(false); //Si ya se respondieron todas las preguntas
 
     
     const eachQuestion = props.apiResults.map( apiResult => apiResult.question)
 
-    // console.log(eachQuestion[onQuestion]);
+    const answers = props.apiResults.map( answer => answer.correct_answer)
 
+    console.log(answers);
+
+    const eachAnswer = answers[onQuestion]
+
+    console.log('answer', eachAnswer);
+
+    const handleAnswerSubmit = (answers) => {
+        //añadir puntuación
+        if (answers === true) setScore(score + 1)
+        //Cambiar a la siguiente pregunta
+        //Identificar que no se haya llegado al final del cuestionario
+        if (onQuestion === props.apiResults.length -1) {
+            setFinished(true);
+        } else {
+            setOnQuestion(onQuestion + 1)
+        }
+    }
+    
+    //Al terminar el quiz enviar a la vista 'Results screen'
+    if (finished) return (
+        <p>Juego Terminado</p>
+    );
 
     return (
         <>
-            {/* <ul>
-                {props.apiResults.map( (apiResult, index) => (
-                    <li key={index}>{apiResult.question}</li>
-                ))}
-            </ul> */}
             <div className='quizContainer'>
                 <div className='questionContainer'>
                     <p className='questionSentence'>{eachQuestion[onQuestion]}</p>
                 </div>
                 <div className='buttonContainer'>
-                    <button>True</button>
-                    <button>False</button>
+                    <button
+                    onClick={() => handleAnswerSubmit(eachAnswer)}
+                    >True</button>
+                    <button
+                    onClick={() => handleAnswerSubmit(eachAnswer)}
+                    >False</button>
                 </div>
                 <div className='questionNumber'>
                     <span>{onQuestion + 1} of</span> {props.apiResults.length}
