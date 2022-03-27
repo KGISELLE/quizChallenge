@@ -48,7 +48,7 @@ Crear un cuestionario de 11 preguntas, con respuestas verdaderas o falsas en la 
     * Dia 1: Planeación y organización (Configuraciones Proyecto).
     * Dia 2: Maquetación vista HomeScreen.
     * Dia 3: Maquetación vista QuizScreen.
-    * Dia 4:
+    * Dia 4: Maquetación vista ResultScreen.
     * Dia 5:
 
 <br>
@@ -225,6 +225,15 @@ Utilizando el comando:
 
 5. Completar maquetación vista "QuizScreen".
 
-6. Lograr que al dar click en cualquiera de los dos botones de la vista "QuizScreen", se cambie la vista a la siguiente pregunta (Pendiente).
+6. Lograr que al dar click en cualquiera de los dos botones de la vista "QuizScreen", se cambie la vista a la siguiente pregunta.
 
 7. Lograr que el resultado de dar click en el boton true o false se guarde para ser comprobado con la respuesta correcta e ir acumulando las respuestas correctas sumandolas, para al final poder dar un resultado final (Pendiente).
+
+8. Inicio maquetación vista "ResultScreen", creación del componente y la hoja de estilos CSS.
+
+<br>
+
+### DIA 4
+<br>
+
+1. Finalizar maquetación vista "ResultScreen"

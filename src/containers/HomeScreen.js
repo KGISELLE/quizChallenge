@@ -14,7 +14,7 @@ const HomeScreen = () => {
                 </header>
                 <h2>You will be presented with 10 True or False questions.</h2>
                 <h2>Can you score 100%?</h2>
-                <Link to='/quiz' className='linkHome'>
+                <Link to='/quiz' className='linkQuiz'>
                     <button className='begin'>BEGIN</button>
                 </Link>
             </div>

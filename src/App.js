@@ -8,6 +8,7 @@ import {
 
 import HomeScreen from './containers/HomeScreen';
 import QuizScreen from './containers/QuizScreen';
+import ResultsScreen from './containers/ResultsScreen';
 
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
             <Routes>
                 <Route path='/' element={<HomeScreen/>} />
                 <Route path='/quiz' element={<QuizScreen/>} />
+                <Route path='/result' element={<ResultsScreen/>} />
             </Routes>
         </Router>
     )

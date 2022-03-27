@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 
+import { Link } from 'react-router-dom';
+
 import '../css/QuestionSpace.css'
+
 
 const QuestionSpace = (props) => {
 
@@ -9,21 +12,26 @@ const QuestionSpace = (props) => {
     const [score, setScore] = useState(0);  //Puntuacion
 
     const [finished, setFinished] = useState(false); //Si ya se respondieron todas las preguntas
+    
 
+    const questCategory = props.apiResults.map( categoryQuest => categoryQuest.category)
     
     const eachQuestion = props.apiResults.map( apiResult => apiResult.question)
+    console.log(eachQuestion[onQuestion])
 
     const answers = props.apiResults.map( answer => answer.correct_answer)
-
-    console.log(answers);
+    console.log(answers[onQuestion])
 
     const eachAnswer = answers[onQuestion]
 
-    console.log('answer', eachAnswer);
+    
+    console.log('score', score);
 
     const handleAnswerSubmit = (answers) => {
         //añadir puntuación
-        if (answers === true) setScore(score + 1)
+        if (answers) {
+            setScore(score + 1)
+        }
         //Cambiar a la siguiente pregunta
         //Identificar que no se haya llegado al final del cuestionario
         if (onQuestion === props.apiResults.length -1) {
@@ -35,15 +43,25 @@ const QuestionSpace = (props) => {
     
     //Al terminar el quiz enviar a la vista 'Results screen'
     if (finished) return (
-        <p>Juego Terminado</p>
+        <div className='finishContainer'> 
+            <Link to='/result'>
+                <button>Show results</button>
+            </Link>    
+        </div>
     );
 
+
     return (
-        <>
+        <>  
+            <header className='headerQuiz'>
+                    <h1 className='titleQuiz'>{questCategory[onQuestion]}</h1>
+            </header>
+
             <div className='quizContainer'>
                 <div className='questionContainer'>
                     <p className='questionSentence'>{eachQuestion[onQuestion]}</p>
                 </div>
+
                 <div className='buttonContainer'>
                     <button
                     onClick={() => handleAnswerSubmit(eachAnswer)}
@@ -52,9 +70,11 @@ const QuestionSpace = (props) => {
                     onClick={() => handleAnswerSubmit(eachAnswer)}
                     >False</button>
                 </div>
+
                 <div className='questionNumber'>
                     <span>{onQuestion + 1} of</span> {props.apiResults.length}
                 </div>
+
             </div>
         </>
     )
