@@ -13,7 +13,7 @@ const QuestionSpace = (props) => {
     
     const eachQuestion = props.apiResults.map( apiResult => apiResult.question)
 
-    // console.log(res[0]);
+    // console.log(eachQuestion[onQuestion]);
 
 
     return (
@@ -25,7 +25,7 @@ const QuestionSpace = (props) => {
             </ul> */}
             <div className='quizContainer'>
                 <div className='questionContainer'>
-                    <p className='questionSentence'>{eachQuestion[0]}</p>
+                    <p className='questionSentence'>{eachQuestion[onQuestion]}</p>
                 </div>
                 <div className='buttonContainer'>
                     <button>True</button>

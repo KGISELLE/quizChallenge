@@ -219,9 +219,9 @@ Utilizando el comando:
 
 2. Lograr que el contenido del titulo de la pregunta "category", sea dinámico halado desde el API.
 
-3. Lograr pintar una sola pregunta en la vista "QuizScreen" desde el API.
+3. Lograr que el numero de la pregunta se muestre en la vista "QuizScreen" de forma dinámica.
 
-4. Lograr que el numero de la pregunta se muestre en la vista "QuizScreen" de forma dinámica.
+4. Lograr pintar una sola pregunta en la vista "QuizScreen" desde el API de forma dinámica.
 
 5. Completar maquetación vista "QuizScreen".
 
