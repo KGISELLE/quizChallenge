@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { Link } from 'react-router-dom';
+import ResultsScreen from '../components/ResultsScreen';
 
 import '../css/QuestionSpace.css'
 
@@ -13,18 +13,22 @@ const QuestionSpace = (props) => {
 
     const [finished, setFinished] = useState(false); //Si ya se respondieron todas las preguntas
 
-    const [optionChosen, setOptionChosen] = useState(''); //Opxion escogida botones "True" or "false"
-    
+    const [optionChosen, setOptionChosen] = useState(''); //Opcion escogida botones "True" or "false"
 
+    
+    
     const questCategory = props.apiResults.map( categoryQuest => categoryQuest.category)
     
-    const eachQuestion = props.apiResults.map( apiResult => apiResult.question)
-    console.log(eachQuestion[onQuestion])
+    const allQuestions = props.apiResults.map( apiResult => apiResult.question)
+    
+    const oneQuestion = allQuestions[onQuestion];
 
     const answers = props.apiResults.map( answer => answer.correct_answer)
-    console.log(answers[onQuestion])
     
     const eachAnswer = answers[onQuestion]
+    console.log(props.apiResults[onQuestion], 'preguntas')
+    
+    const questionsQuantity = props.apiResults.length;
     
     
     const handleAnswerSubmit = (eachAnswer) => {
@@ -44,10 +48,14 @@ const QuestionSpace = (props) => {
     
     //Al terminar el quiz enviar a la vista 'Results screen'
     if (finished) return (
-        <div className='finishContainer'> 
-            <Link to='/result'>
-                <button>Show results</button>
-            </Link>    
+        <div> 
+            <ResultsScreen 
+            score={score} 
+            questionsQuantity={questionsQuantity} 
+            allQuestions={allQuestions}
+            eachAnswer={eachAnswer}
+            optionChosen={optionChosen}
+            /> 
         </div>
     );
 
@@ -60,25 +68,26 @@ const QuestionSpace = (props) => {
 
             <div className='quizContainer'>
                 <div className='questionContainer'>
-                    <p className='questionSentence'>{eachQuestion[onQuestion]}</p>
+                    <p className='questionSentence'>{oneQuestion}</p>
                 </div>
 
                 <div className='buttonContainer'>
                     <button
                     onClick={() => {
                         handleAnswerSubmit(eachAnswer); 
-                        setOptionChosen('True')}}
+                        setOptionChosen('True');
+                    }}
                     >True</button>
                     <button
                     onClick={() => {
                         handleAnswerSubmit(eachAnswer); 
-                        setOptionChosen('False')
+                        setOptionChosen('False');
                     }}
                     >False</button>
                 </div>
 
                 <div className='questionNumber'>
-                    <span>{onQuestion + 1} </span>of {props.apiResults.length}
+                    <span>{onQuestion + 1} </span>of {questionsQuantity}
                 </div>
 
             </div>
