@@ -19,7 +19,8 @@
     box-sizing: border-box;
 }
 .questionContainer{
-    margin: 0em 2em;
+    /* margin: 0em 2em; */
+    width: 60vw;
     padding: 2em;
     border: 2px solid red;
     border-radius: 10px;
@@ -49,6 +50,11 @@ button{
     text-align: center;
     font-size: 25px;
 }
+span{
+    color: #551A8B;
+    font-weight: bold;
+    font-size: 40px;
+}
 .finishContainer{
    display: flex; 
    justify-content: center;
@@ -67,7 +73,6 @@ button{
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
-        margin: 0em 2em;
     }
     button{
         margin: 0.5em 0em;

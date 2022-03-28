@@ -12,6 +12,8 @@ const QuestionSpace = (props) => {
     const [score, setScore] = useState(0);  //Puntuacion
 
     const [finished, setFinished] = useState(false); //Si ya se respondieron todas las preguntas
+
+    const [optionChosen, setOptionChosen] = useState(''); //Opxion escogida botones "True" or "false"
     
 
     const questCategory = props.apiResults.map( categoryQuest => categoryQuest.category)
@@ -21,25 +23,24 @@ const QuestionSpace = (props) => {
 
     const answers = props.apiResults.map( answer => answer.correct_answer)
     console.log(answers[onQuestion])
-
-    const eachAnswer = answers[onQuestion]
-
     
-    console.log('score', score);
-
-    const handleAnswerSubmit = (answers) => {
+    const eachAnswer = answers[onQuestion]
+    
+    
+    const handleAnswerSubmit = (eachAnswer) => {
         //añadir puntuación
-        if (answers) {
+        if (eachAnswer === optionChosen) {
             setScore(score + 1)
         }
         //Cambiar a la siguiente pregunta
-        //Identificar que no se haya llegado al final del cuestionario
+        //Comprobar que se llego al final de las preguntas
         if (onQuestion === props.apiResults.length -1) {
             setFinished(true);
         } else {
             setOnQuestion(onQuestion + 1)
         }
     }
+    console.log('score', score);
     
     //Al terminar el quiz enviar a la vista 'Results screen'
     if (finished) return (
@@ -64,15 +65,20 @@ const QuestionSpace = (props) => {
 
                 <div className='buttonContainer'>
                     <button
-                    onClick={() => handleAnswerSubmit(eachAnswer)}
+                    onClick={() => {
+                        handleAnswerSubmit(eachAnswer); 
+                        setOptionChosen('True')}}
                     >True</button>
                     <button
-                    onClick={() => handleAnswerSubmit(eachAnswer)}
+                    onClick={() => {
+                        handleAnswerSubmit(eachAnswer); 
+                        setOptionChosen('False')
+                    }}
                     >False</button>
                 </div>
 
                 <div className='questionNumber'>
-                    <span>{onQuestion + 1} of</span> {props.apiResults.length}
+                    <span>{onQuestion + 1} </span>of {props.apiResults.length}
                 </div>
 
             </div>
