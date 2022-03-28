@@ -1,7 +1,7 @@
 # Paso a paso y tareas Prueba Técnica ✨🏃‍♀️🏃‍♀️🏃‍♀️
 
-### ***Fecha Inicio:*** 
-### ***Plazo máximo de entrega Prueba Tecnica:*** 
+### ***Fecha Inicio: Jueves 24 Marzo 5pm*** 
+### ***Plazo máximo de entrega Prueba Tecnica: Lunes 28 Marzo medio dia*** 
 <br>
 
 ### **Objetivo principal**
@@ -49,7 +49,7 @@ Crear un cuestionario de 11 preguntas, con respuestas verdaderas o falsas en la 
     * Dia 2: Maquetación vista HomeScreen.
     * Dia 3: Maquetación vista QuizScreen.
     * Dia 4: Maquetación vista ResultScreen.
-    * Dia 5:
+    * Dia 5: Finalización y deploy.
 
 <br>
 
@@ -257,6 +257,6 @@ Utilizando el comando:
 
 3. Intentar solucionar el error al mostrar en la vista "ResultsScreen" que se muestren las preguntas del quiz con su estado si fueron correctas o incorrectas (Pendiente).
 
-4. Realizar Deploy de la aplicación.
+4. Realizar Deploy de la aplicación en Netlify.
 
 5. Enviar correo con solucion del reto.
