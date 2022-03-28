@@ -257,6 +257,6 @@ Utilizando el comando:
 
 3. Intentar solucionar el error al mostrar en la vista "ResultsScreen" que se muestren las preguntas del quiz con su estado si fueron correctas o incorrectas (Pendiente).
 
-4. Realizar Deploy de la aplicación en Netlify.
+4. Realizar Deploy de la aplicación en Netlify https://quizchallengepruebagis.netlify.app/.
 
 5. Enviar correo con solucion del reto.
