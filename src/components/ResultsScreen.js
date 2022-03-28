@@ -7,7 +7,7 @@ import '../css/ResultsScreen.css'
 
 const ResultsScreen = (props) => {
 
-    const color = (props.eachAnswer === props.optionChosen) ? '+' : '-';
+    const questionSymbol = (props.eachAnswer === props.optionChosen) ? '+' : '-';
 
     return (
         <>
@@ -19,18 +19,18 @@ const ResultsScreen = (props) => {
                         </h2>
                 </header>
 
+
                 <div className='container'>
                     <div className='resultsContainer'>
-                        <p className='resultSentence'>{color + ' ' + props.allQuestions[0]}</p>
-                        <p className='resultSentence'>{color + ' ' + props.allQuestions[1]}</p>
-                        <p className='resultSentence'>{color + ' ' + props.allQuestions[2]}</p>
-                        <p className='resultSentence'>{color + ' ' + props.allQuestions[3]}</p>
-                        <p className='resultSentence'>{color + ' ' + props.allQuestions[4]}</p>
-                        <p className='resultSentence'>{color + ' ' + props.allQuestions[5]}</p>
-                        <p className='resultSentence'>{color + ' ' + props.allQuestions[6]}</p>
-                        <p className='resultSentence'>{color + ' ' + props.allQuestions[7]}</p>
-                        <p className='resultSentence'>{color + ' ' + props.allQuestions[8]}</p>
-                        <p className='resultSentence'>{color + ' ' + props.allQuestions[9]}</p>
+                        {props.allQuestions.map((pregunta) => (
+                            <p className='resultSentence'>{questionSymbol + ' ' + pregunta}</p>
+                        ))}
+                        {/* {props.answers.map((respuesta) => (
+                            <p>{respuesta}</p>
+                        ))} */}
+                        {/* {props.optionChosen.map((option) => (
+                            <p>{option + 'opcionescogida'}</p>
+                        ))} */}
                     </div>
 
                     <Link to='/' className='linkHome'>

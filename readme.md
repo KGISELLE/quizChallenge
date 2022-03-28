@@ -227,7 +227,7 @@ Utilizando el comando:
 
 6. Lograr que al dar click en cualquiera de los dos botones de la vista "QuizScreen", se cambie la vista a la siguiente pregunta.
 
-7. Lograr que el resultado de dar click en el boton true o false se guarde para ser comprobado con la respuesta correcta e ir acumulando las respuestas correctas sumandolas, para al final poder dar un resultado final (Pendiente).
+
 
 8. Inicio maquetación vista "ResultScreen", creación del componente y la hoja de estilos CSS.
 
@@ -237,3 +237,26 @@ Utilizando el comando:
 <br>
 
 1. Finalizar maquetación vista "ResultScreen"
+
+2. Lograr que el resultado de dar click en el boton true o false se guarde para ser comprobado con la respuesta correcta e ir acumulando las respuestas correctas sumandolas, para al final poder dar un resultado final.
+
+3. Hubo un problema con el contador, algunas vez no toma el click de la respuesta corecta y no lo cuenta, intentar solucionarlo (Pendiente).
+
+4. En la vista "ResultScreen", mostrar las preguntas que se contestaron en el quiz.
+
+6. Maquetar el link "Play again" para volver a realizar el quiz.
+
+<br>
+
+### DIA 5
+<br>
+
+1. Intentar solucionar error al contar el score (pendiente).
+
+2. Mostrar las preguntas de "ResultsScreen" de forma dinámica.
+
+3. Intentar solucionar el error al mostrar en la vista "ResultsScreen" que se muestren las preguntas del quiz con su estado si fueron correctas o incorrectas (Pendiente).
+
+4. Realizar Deploy de la aplicación.
+
+5. Enviar correo con solucion del reto.

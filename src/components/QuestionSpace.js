@@ -27,11 +27,13 @@ const QuestionSpace = (props) => {
     
     const eachAnswer = answers[onQuestion]
     console.log(props.apiResults[onQuestion], 'preguntas')
+    console.log(eachAnswer, "Respuesta corecta")
+    console.log(optionChosen, "Respuesta escogida")
     
     const questionsQuantity = props.apiResults.length;
     
     
-    const handleAnswerSubmit = (eachAnswer) => {
+    const handleAnswerSubmit = () => {
         //añadir puntuación
         if (eachAnswer === optionChosen) {
             setScore(score + 1)
@@ -54,7 +56,9 @@ const QuestionSpace = (props) => {
             questionsQuantity={questionsQuantity} 
             allQuestions={allQuestions}
             eachAnswer={eachAnswer}
+            onQuestion={onQuestion}
             optionChosen={optionChosen}
+            answers={answers}
             /> 
         </div>
     );
@@ -74,13 +78,13 @@ const QuestionSpace = (props) => {
                 <div className='buttonContainer'>
                     <button
                     onClick={() => {
-                        handleAnswerSubmit(eachAnswer); 
+                        handleAnswerSubmit(); 
                         setOptionChosen('True');
                     }}
                     >True</button>
                     <button
                     onClick={() => {
-                        handleAnswerSubmit(eachAnswer); 
+                        handleAnswerSubmit(); 
                         setOptionChosen('False');
                     }}
                     >False</button>
